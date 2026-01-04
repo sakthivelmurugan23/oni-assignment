@@ -13,6 +13,13 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   userInterfaceStyle: "automatic",
   newArchEnabled: true,
 
+  /* ---------- 🔑 EAS CONFIG (REQUIRED) ---------- */
+  extra: {
+    eas: {
+      projectId: "e16dd368-2015-4d8f-96e0-2d88528abf10",
+    },
+  },
+
   /* ---------- iOS ---------- */
   ios: {
     supportsTablet: true,

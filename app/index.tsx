@@ -42,7 +42,7 @@ export default function Index() {
 
         {/* Gradient Overlay */}
         <LinearGradient
-          colors={["transparent", "rgba(0,0,0,0.65)"]}
+          colors={["transparent", "rgba(151, 145, 145, 0.65)",]}
           style={styles.gradient}
         />
 
@@ -81,8 +81,6 @@ export default function Index() {
     </ScrollView>
   );
 }
-
-
 const styles = StyleSheet.create(() => ({
   container: {
     padding: 20,
@@ -152,8 +150,8 @@ const styles = StyleSheet.create(() => ({
   },
 
   articleTitle: {
-    fontSize: 16,
-    fontWeight: "600",
+    fontSize: 20,
+    fontWeight: "700",
     color: "#FFFFFF",
     marginTop: 4,
   },
