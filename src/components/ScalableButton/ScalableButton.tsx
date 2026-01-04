@@ -1,4 +1,3 @@
-import { TranslationKeys, useCustomTranslation } from "@/locale";
 import * as Haptics from "expo-haptics";
 import React, { useEffect, useState } from "react";
 import {
@@ -28,7 +27,7 @@ type ScalableButtonProps = PressableProps & {
   value?: number;
   isError?: boolean;
   variants?: ButtonVariants;
-  label: TranslationKeys;
+  label: string;
   leftIcon?: React.ReactNode; // <-- NEW
   rightIcon?: React.ReactNode; // <-- NEW (optional)
   textStyle?: StyleProp<TextStyle>;
@@ -50,8 +49,7 @@ function ScalableButton({
   const shake = useSharedValue(0);
   const [disabled, setDisabled] = useState(false);
 
-  const t=useCustomTranslation()
-  const labelText=t(label)
+  const labelText=(label)
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ scale: scale.value }],
   }));
@@ -100,14 +98,11 @@ function ScalableButton({
       {leftIcon && <View style={styles.leftIcon}>{leftIcon}</View>}
 
       {/* LABEL */}
-      {typeof label === "string" ? (
         <Text
           testID={`${label}-text`}
           style={[styles.textBase,styles.textVariant(variants),textStyle]}
         >{labelText}</Text>
-      ) : (
-        label
-      )}
+   
       {isPending && <ActivityIndicator size="small" color={variants === "black" ? "white" : "black"} />}
       {/* RIGHT ICON */}
       {rightIcon && <View style={styles.rightIcon}>{rightIcon}</View>}

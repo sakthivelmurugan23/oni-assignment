@@ -29,13 +29,13 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       UIBackgroundModes: ["remote-notification"],
     },
 
-    // googleServicesFile: "./assets/GoogleService-Info.plist",
+    googleServicesFile: "./GoogleService-Info.plist",
   },
 
   /* ---------- Android ---------- */
   android: {
     package: "com.expobuildtemplate.mobile",
-    // googleServicesFile: "./assets/google-services.json",
+    googleServicesFile: "./google-services.json",
 
     adaptiveIcon: {
       backgroundColor: "#E6F4FE",

@@ -10,31 +10,30 @@ export const styles = StyleSheet.create(theme => ({
     gap: 8,
   },
   black: {
-    backgroundColor: theme.colors.blackButton,
+    backgroundColor: theme.colors.black,
   },
   variant: (variant: 'outlined' | 'yellow' | 'black') => ({
     outlined: {
-      backgroundColor: theme.colors.outlinedButton,
+      backgroundColor: theme.colors.text,
       borderWidth: 1,
-      borderColor: theme.colors.outlinedButtonBorder,
+      borderColor: theme.colors.black,
     },
     yellow: {
-      backgroundColor: theme.colors.yellow,
+      backgroundColor: theme.colors.black,
     },
     black: {
-      backgroundColor: theme.colors.blackButton,
+      backgroundColor: theme.colors.primary,
     },
   }[variant]),
 
   textBase: {
     fontSize: 18,
-    fontFamily: theme.fonts.jakarta500,
   },
 
   textVariant: (variant: 'outlined' | 'yellow' | 'black') => ({
-    outlined: { color: theme.colors.outlinedButtonText },
-    yellow: { color: theme.colors.yellowButtonText },
-    black: { color: theme.colors.blackButtonText },
+    outlined: { color: theme.colors.black },
+    yellow: { color: theme.colors.black },
+    black: { color: theme.colors.black },
   }[variant]),
 
   leftIcon: {

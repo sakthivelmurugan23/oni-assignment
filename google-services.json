@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "520737175158",
+    "project_id": "oni-assignment",
+    "storage_bucket": "oni-assignment.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520737175158:android:225c18f42e82632aa39157",
+        "android_client_info": {
+          "package_name": "com.oniassignment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDPaTcQIFzeon_01jxNWU2aglqpPyVDh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

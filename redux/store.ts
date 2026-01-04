@@ -5,11 +5,17 @@ import {
 } from '@reduxjs/toolkit';
 import { PersistConfig, persistReducer, persistStore } from 'redux-persist';
 import { reduxStorage } from './mmkvStorage';
+import RecordReducer from './Record/RecordSlice';
+
+
+
 
 
 const reducers = combineReducers({
-  
+  record: RecordReducer, // ✅ rename here
 });
+
+
 
 const rootReducer = (
   state: ReturnType<typeof reducers> | undefined,
@@ -26,9 +32,6 @@ const persistConfig: PersistConfig<ReturnType<typeof rootReducer>> = {
   storage: reduxStorage,
   blacklist: [
     // "ForceUpdateReducer"
-    "ConfirmationModalReducer",
-    "BottomSheetReducer",
-    "ChatReducer"
   ],
 };
 
