@@ -3,7 +3,6 @@ import { ConfigContext, ExpoConfig } from "expo/config";
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
 
-  /* ---------- App Identity ---------- */
   name: "expo-build-template",
   slug: "expo-build-template",
   version: "1.0.0",
@@ -11,16 +10,15 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   icon: "./assets/images/icon.png",
   scheme: "expobuildtemplate",
   userInterfaceStyle: "automatic",
-  newArchEnabled: true,
 
-  /* ---------- 🔑 EAS CONFIG (REQUIRED) ---------- */
+  newArchEnabled: true,
+     "owner": "sakthimurugan.dev",
   extra: {
     eas: {
       projectId: "e16dd368-2015-4d8f-96e0-2d88528abf10",
     },
   },
 
-  /* ---------- iOS ---------- */
   ios: {
     supportsTablet: true,
     bundleIdentifier: "com.agmac24.expobuildtemplate",
@@ -41,7 +39,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
 
   /* ---------- Android ---------- */
   android: {
-    package: "com.expobuildtemplate.mobile",
+    package: "com.oniassignment",
     googleServicesFile: "./google-services.json",
 
     adaptiveIcon: {
@@ -110,9 +108,10 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       "expo-build-properties",
       {
         android: {
-          compileSdkVersion: 35,
-          targetSdkVersion: 35,
-          buildToolsVersion: "35.0.0",
+          // ✅ STABLE SDK
+          compileSdkVersion: 34,
+          targetSdkVersion: 34,
+          buildToolsVersion: "34.0.0",
           usesCleartextTraffic: false,
         },
         ios: {

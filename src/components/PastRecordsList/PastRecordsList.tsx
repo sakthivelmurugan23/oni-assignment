@@ -1,5 +1,6 @@
-import { LegendList } from "@legendapp/list";
-import React from "react";
+import { LegendList, LegendListRef } from "@legendapp/list";
+import { useFocusEffect } from "expo-router";
+import React, { useCallback, useRef } from "react";
 import { Text, View } from "react-native";
 import { StyleSheet } from "react-native-unistyles";
 
@@ -13,13 +14,22 @@ type Props = {
   records: RecordItem[];
 };
 
+
+
 export default function PastRecordsList({ records }: Props) {
+
+  const listRef=useRef<LegendListRef>(null)
   if (!records || records.length === 0) {
     return <Text style={styles.emptyText}>No records yet</Text>;
   }
 
+useFocusEffect(useCallback(()=>{},[
+  listRef.current?.scrollToIndex({index:0})
+]))
+   
   return (
     <LegendList
+    ref={listRef}
       data={records}
       keyExtractor={(item) => item.id}
       estimatedItemSize={68}
